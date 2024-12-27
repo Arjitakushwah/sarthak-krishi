@@ -1,0 +1,257 @@
+{% extends 'layout.html' %} {% block body %}
+<section class="banner_w3lspvt" id="home">
+  <div class="csslider infinity" id="slider1">
+    <div class="banner-top">
+      <div class="overlay">
+        <div class="container">
+          <div class="w3layouts-banner-info text-center">
+            <h3 class="text-wh">Government Schemes for Farmers</h3>
+            <p class="text-li mx-auto mt-2">
+              Empowering Indian farmers with knowledge about schemes and
+              financial support provided by the government.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Schemes in Card Layout -->
+<section class="py-5">
+  <div class="container py-md-4">
+    <h3 class="heading mb-sm-5 mb-4 text-center">Available Schemes</h3>
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <img
+            src="{{ url_for('static', filename='images/pmfby.png') }}"
+            class="card-img-top"
+            alt="PMFBY"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Pradhan Mantri Fasal Bima Yojana (PMFBY)</h5>
+            <p class="card-text">
+              A comprehensive crop insurance scheme to protect farmers against
+              natural calamities, pests, and diseases.
+            </p>
+          </div>
+          <div class="card-footer text-center">
+            <a
+              href="https://pmfby.gov.in/"
+              class="btn btn-primary btn-sm"
+              target="_blank"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <img
+            src="{{ url_for('static', filename='images/soilhealth.png') }}"
+            class="card-img-top"
+            alt="Soil Health Card"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Soil Health Card Scheme</h5>
+            <p class="card-text">
+              Helps farmers understand the health of their soil and provides
+              recommendations for nutrients and fertilizers.
+            </p>
+          </div>
+          <div class="card-footer text-center">
+            <a
+              href="https://soilhealth.dac.gov.in/"
+              class="btn btn-primary btn-sm"
+              target="_blank"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <img
+            src="{{ url_for('static', filename='images/pmkisan.jpeg') }}"
+            class="card-img-top"
+            alt="PM-KISAN"
+          />
+          <div class="card-body">
+            <h5 class="card-title">PM-KISAN</h5>
+            <p class="card-text">
+              Offers financial assistance of ₹6,000 per year to farmers in three
+              installments to support their agricultural needs.
+            </p>
+          </div>
+          <div class="card-footer text-center">
+            <a
+              href="https://pmkisan.gov.in/"
+              class="btn btn-primary btn-sm"
+              target="_blank"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <img
+            src="{{ url_for('static', filename='images/rkvy.jpeg') }}"
+            class="card-img-top"
+            alt="RKVY"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Rashtriya Krishi Vikas Yojana (RKVY)</h5>
+            <p class="card-text">
+              Encourages states to increase public investment in agriculture and
+              allied sectors.
+            </p>
+          </div>
+          <div class="card-footer text-center">
+            <a
+              href="https://rkvy.nic.in/"
+              class="btn btn-primary btn-sm"
+              target="_blank"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Card 5: eNAM -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <img
+            src="{{ url_for('static', filename='images/enam.png') }}"
+            class="card-img-top"
+            alt="eNAM"
+          />
+          <div class="card-body">
+            <h5 class="card-title">National Agriculture Market (eNAM)</h5>
+            <p class="card-text">
+              A digital platform that connects farmers with buyers, ensuring
+              better price discovery and transparency in transactions.
+            </p>
+          </div>
+          <div class="card-footer text-center">
+            <a
+              href="https://enam.gov.in/"
+              class="btn btn-primary btn-sm"
+              target="_blank"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6: PM-KUSUM -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <img
+            src="{{ url_for('static', filename='images/pmkusum.png') }}"
+            class="card-img-top"
+            alt="PM-KUSUM"
+          />
+          <div class="card-body">
+            <h5 class="card-title">PM-KUSUM</h5>
+            <p class="card-text">
+              A scheme that aims to promote the generation of solar power by
+              farmers, reducing their electricity bills and making them
+              energy-efficient.
+            </p>
+          </div>
+          <div class="card-footer text-center">
+            <a
+              href="https://pmkusum.in/"
+              class="btn btn-primary btn-sm"
+              target="_blank"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section py-5">
+    <div class="container">
+        <h3 class="heading mb-sm-5 mb-4 text-center">Frequently Asked Questions</h3>
+
+        <div id="accordion">
+            <!-- FAQ 1 -->
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What is the PM-KISAN scheme?
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        The PM-KISAN scheme offers financial assistance of ₹6,000 per year to farmers in three installments to support their agricultural needs.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            How can I apply for the Soil Health Card Scheme?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        You can apply for the Soil Health Card Scheme by visiting the official website of the Ministry of Agriculture and filling out the application form online. You can also apply at the local agricultural office in your area.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            What are the benefits of the eNAM scheme?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        The eNAM scheme allows farmers to sell their produce online through a national electronic platform, ensuring better price discovery and transparency in transactions.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            How can I check my eligibility for the PMFBY scheme?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">
+                        You can check your eligibility for the PMFBY scheme on the official website or by visiting the nearest insurance office. The eligibility criteria are based on the type of crops grown, your region, and other factors.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
