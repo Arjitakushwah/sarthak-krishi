@@ -1,5 +1,11 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request
 import json
+import joblib
+import numpy as np
+
+# Load the trained model
+model = joblib.load('NOTEBOOKS\RandomForest.pkl')
+
 
 app = Flask(__name__)
 
@@ -35,6 +41,27 @@ def get_faqs():
     with open('static/faqs.json') as f:
         faqs = json.load(f)
     return jsonify(faqs)
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    # Get form data
+    nitrogen = float(request.form['nitrogen'])
+    phosphorus = float(request.form['phosphorus'])
+    potassium = float(request.form['potassium'])
+    ph_value = float(request.form['ph_value'])
+    temperature = float(request.form['temperature'])
+    humidity = float(request.form['humidity'])
+    rainfall = float(request.form['rainfall'])
+
+    # Prepare the input features
+    features = np.array([[nitrogen, phosphorus, potassium, temperature, humidity, ph_value, rainfall, 1]])
+
+    # Predict the crop
+    prediction = model.predict(features)
+
+    # Render the result on the page with the recommendation
+    return render_template('crop.html', recommendation=prediction[0])
+
 
 
 

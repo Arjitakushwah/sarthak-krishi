@@ -22,7 +22,7 @@
 <section class="py-5">
     <div class="container py-md-4">
         <h3 class="heading mb-sm-5 mb-4 text-center">Crop Recommendation System</h3>
-        <form method="POST" action="" class="row g-3">
+        <form method="POST" action="/predict" class="row g-3">
             <div class="col-md-6">
                 <label for="nitrogen" class="form-label">Nitrogen (N)</label>
                 <input type="number" id="nitrogen" name="nitrogen" class="form-control" required>
@@ -64,10 +64,11 @@
         <h3 class="heading mb-sm-5 mb-4 text-center">Recommended Crop</h3>
         {% if recommendation %}
         <div class="alert alert-success text-center">
-            <h4></h4>
+            <h4>Your recommended crop is: {{ recommendation }}</h4>
         </div>
         {% endif %}
     </div>
 </section>
 
 {% endblock %}
+
