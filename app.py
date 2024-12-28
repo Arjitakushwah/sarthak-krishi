@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
+import json
 
 app = Flask(__name__)
 
@@ -24,7 +25,16 @@ def schemes():
 
 @app.route('/faq')
 def faq():
-    return render_template('faq.html', title="FAQ - Sarthak Krishi")
+    with open('static/json/faq.json', 'r') as file:
+        faq_data = json.load(file)
+    return render_template('faq.html', faqs=faq_data)
+
+# API to fetch FAQs from JSON file
+@app.route('/api/faqs', methods=['GET'])
+def get_faqs():
+    with open('static/faqs.json') as f:
+        faqs = json.load(f)
+    return jsonify(faqs)
 
 
 

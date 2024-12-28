@@ -1,0 +1,18 @@
+[
+    {
+        "question": "What is Sarthak Krishi?",
+        "answer": "Sarthak Krishi is an agriculture platform to assist farmers with crop recommendations, fertilizer advice, and disease detection."
+    },
+    {
+        "question": "How do I predict the best crop for my field?",
+        "answer": "Use the Crop Prediction feature by providing details like soil type, temperature, and rainfall."
+    },
+    {
+        "question": "How do I report a technical issue?",
+        "answer": "Visit the Contact page and submit the form with your issue details."
+    },
+    {
+        "question": "What are the supported regions for the services?",
+        "answer": "Currently, Sarthak Krishi supports all regions within India."
+    }
+]

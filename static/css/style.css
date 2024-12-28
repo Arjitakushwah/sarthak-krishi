@@ -1209,6 +1209,46 @@ a.move-top {
 }
 /*-- //move top --*/
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+
+
+
+
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+
+
+.faq-item {
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.faq-item h3 {
+    margin: 0;
+    color: #333;
+}
+
+.faq-item p {
+    margin: 0.5rem 0 0;
+    color: #666;
+}
+
+
+
+
 
 /*-- Responsive design --*/
 
