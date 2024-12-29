@@ -33,7 +33,7 @@ def schemes():
 def faq():
     with open('static/json/faq.json', 'r') as file:
         faq_data = json.load(file)
-    return render_template('faq.html', faqs=faq_data)
+    return render_template('faq.html', faqs=faq_data, title="FAQ")
 
 # API to fetch FAQs from JSON file
 @app.route('/api/faqs', methods=['GET'])
