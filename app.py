@@ -1,11 +1,18 @@
 from flask import Flask, render_template, jsonify, request
 import json
+import requests
 import joblib
 import numpy as np
-
+import pandas as pd
+from utils.fertilizer import fertilizer_dic
+from markupsafe import Markup
 # Load the trained model
-model = joblib.load('NOTEBOOKS\RandomForest.pkl')
+crop_model = joblib.load('NOTEBOOKS\RandomForest.pkl')
+fertilizer_model = joblib.load('NOTEBOOKS\RandomForest.pkl')
 
+#weather api
+WEATHER_API_KEY = "4867af3c5cff24159c594b45b0be9ca9"
+WEATHER_API_URL = "https://api.openweathermap.org/data/2.5/weather"
 
 app = Flask(__name__)
 
@@ -42,6 +49,8 @@ def get_faqs():
         faqs = json.load(f)
     return jsonify(faqs)
 
+
+# crop prediction
 @app.route('/predict', methods=['POST'])
 def predict():
     # Get form data
@@ -58,11 +67,81 @@ def predict():
     features = np.array([[nitrogen, phosphorus, potassium, temperature, humidity, ph_value, rainfall, soil]])
 
     # Predict the crop
-    prediction = model.predict(features)
+    prediction = crop_model.predict(features)
 
     # Render the result on the page with the recommendation
     return jsonify({'recommendation': prediction[0]})
 
+
+@ app.route('/fertilizer-predict', methods=['POST'])
+def fert_recommend():
+    crop_name = str(request.form['cropname'])
+    N = int(request.form['nitrogen'])
+    P = int(request.form['phosphorous'])
+    K = int(request.form['pottasium'])
+    # ph = float(request.form['ph'])
+
+    df = pd.read_csv('DATA/fertilizer.csv')
+
+    nr = df[df['Crop'] == crop_name]['N'].iloc[0]
+    pr = df[df['Crop'] == crop_name]['P'].iloc[0]
+    kr = df[df['Crop'] == crop_name]['K'].iloc[0]
+
+    n = nr - N
+    p = pr - P
+    k = kr - K
+    temp = {abs(n): "N", abs(p): "P", abs(k): "K"}
+    max_value = temp[max(temp.keys())]
+    if max_value == "N":
+        if n < 0:
+            key = 'NHigh'
+        else:
+            key = "Nlow"
+    elif max_value == "P":
+        if p < 0:
+            key = 'PHigh'
+        else:
+            key = "Plow"
+    else:
+        if k < 0:
+            key = 'KHigh'
+        else:
+            key = "Klow"
+
+    recommendation = Markup(str(fertilizer_dic[key]))
+
+    
+    return jsonify({'recommendation': recommendation})
+
+
+
+
+
+@app.route('/get_weather', methods=['POST'])
+def get_weather():
+    try:
+        city = request.form['city']
+        response = requests.get(WEATHER_API_URL, params={
+            "q": city,
+            "appid": WEATHER_API_KEY,
+            "units": "metric"  # Get temperature in Celsius
+        })
+
+        data = response.json()
+
+        if response.status_code == 200:
+            weather_info = {
+                "temperature": data["main"]["temp"],
+                "humidity": data["main"]["humidity"],
+                "description": data["weather"][0]["description"].capitalize(),
+                "wind_speed": data["wind"]["speed"]
+            }
+            return jsonify(weather_info)
+        else:
+            return jsonify({"error": data.get("message", "Unable to fetch weather data")})
+    
+    except Exception as e:
+        return jsonify({"error": str(e)})
 
 
 
