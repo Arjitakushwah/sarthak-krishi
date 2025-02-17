@@ -52,15 +52,16 @@ def predict():
     temperature = float(request.form['temperature'])
     humidity = float(request.form['humidity'])
     rainfall = float(request.form['rainfall'])
+    soil = int(request.form['soil_type'])
 
     # Prepare the input features
-    features = np.array([[nitrogen, phosphorus, potassium, temperature, humidity, ph_value, rainfall, 1]])
+    features = np.array([[nitrogen, phosphorus, potassium, temperature, humidity, ph_value, rainfall, soil]])
 
     # Predict the crop
     prediction = model.predict(features)
 
     # Render the result on the page with the recommendation
-    return render_template('crop.html', recommendation=prediction[0])
+    return jsonify({'recommendation': prediction[0]})
 
 
 
