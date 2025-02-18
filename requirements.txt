@@ -1,0 +1,11 @@
+fuzzywuzzy
+spacy
+nltk 
+sentence-transformers
+json
+requests
+flask
+pandas
+numpy
+joblib
+markup

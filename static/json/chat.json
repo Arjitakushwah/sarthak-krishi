@@ -1,0 +1,56 @@
+{
+    "hello": "Hello! How can I assist you today?",
+    "hi": "Hi there! How can I help you?",
+    "hey": "Hey! What can I do for you?",
+    "how are you": "I'm just a bot, but I'm doing well, thank you!",
+    "what is your name": "I am Sarthak Krishi Bot, here to help farmers!",
+    "who are you": "I am your chatbot assistant, helping you with farm-related questions.",
+    "bye": "Goodbye! Have a great day!",
+    "thank you": "You're welcome! Happy to help.",
+    "thanks": "No problem! Let me know if you need more help.",
+    
+    "what crops should i grow in summer": "For summer, you can grow crops like maize, millets, rice, sugarcane, and pulses.",
+    "what crops are best for winter": "For winter, you can grow wheat, barley, mustard, peas, and carrots.",
+    "best crop for my soil": "It depends on your soil type. Sandy soil is good for groundnuts and watermelon, while clay soil is better for paddy and wheat.",
+    
+    "which fertilizer should i use": "It depends on your crop. Urea is good for nitrogen, while DAP is used for phosphorus.",
+    "how to improve soil fertility": "You can use organic compost, green manure, and crop rotation techniques to improve soil fertility.",
+    "how often should i fertilize my crops": "The frequency depends on the crop. Generally, you should apply fertilizer at sowing, mid-growth, and before flowering.",
+    
+    "what is organic farming": "Organic farming avoids synthetic fertilizers and pesticides, focusing on natural methods like composting and crop rotation.",
+    "how can i start organic farming": "Start by using natural compost, avoiding chemical pesticides, and maintaining soil health through crop rotation.",
+    
+    "what is crop rotation": "Crop rotation is growing different crops in the same field to maintain soil health and reduce pests.",
+    "why is crop rotation important": "It prevents soil depletion, reduces pest infestations, and increases crop yield over time.",
+    
+    "government schemes for farmers": "Some schemes include PM-KISAN, KCC Loan, Soil Health Card, and PMFBY (Crop Insurance).",
+    "pm kisan yojana": "PM-KISAN provides direct income support of ₹6000 per year to small farmers in three equal installments.",
+    "how to apply for pm kisan": "You can apply on the official PM-KISAN website by registering with your Aadhaar and land details.",
+    
+    "what is kisan credit card": "KCC provides farmers with short-term loans at low-interest rates for purchasing seeds, fertilizers, and equipment.",
+    "how to get kisan credit card": "You can apply at a bank by providing your land ownership documents and Aadhaar card.",
+    
+    "how to control pests naturally": "Use neem oil, companion planting, and crop rotation to reduce pest attacks naturally.",
+    "what are common plant diseases": "Some common diseases include rust, wilt, powdery mildew, and blight.",
+    "how to treat plant diseases": "Use resistant crop varieties, maintain proper spacing, and apply natural or recommended pesticides.",
+    
+    "what is the best irrigation method": "Drip irrigation is water-efficient, while sprinkler irrigation is good for large fields.",
+    "how to save water in farming": "You can use rainwater harvesting, drip irrigation, and mulching to conserve water.",
+    
+    "best tractor for farming": "Popular tractors in India include Mahindra, Swaraj, John Deere, and Sonalika.",
+    "how to increase crop yield": "Use high-quality seeds, proper irrigation, balanced fertilizers, and pest control methods.",
+    
+    "current market price of wheat": "You can check government websites like Agmarknet or local market reports for real-time prices.",
+    "how to sell my crops online": "You can use platforms like eNAM, KisanMandi, and government portals to sell crops online.",
+    
+    "what is the best time to plant rice": "Rice is usually planted at the beginning of the monsoon, between June and July.",
+    "how to prepare soil for wheat": "Plow the field properly, remove weeds, and apply a basal dose of nitrogen and phosphorus fertilizers.",
+    
+    "how to protect crops from extreme weather": "Use protective nets, mulching, and proper irrigation techniques to minimize weather impact.",
+    "can i grow two crops together": "Yes! It's called intercropping. A common combination is maize and beans or wheat and mustard.",
+    
+    "how to store harvested grains": "Store grains in dry, well-ventilated storage bins and use neem leaves to prevent insect attacks.",
+    "how to get a loan for farming": "You can apply for agriculture loans from banks like SBI, PNB, and NABARD under government schemes."
+  }
+  
+  

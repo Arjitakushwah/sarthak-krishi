@@ -6,12 +6,13 @@ import numpy as np
 import pandas as pd
 from utils.fertilizer import fertilizer_dic
 from markupsafe import Markup
+from fuzzywuzzy import process
 # Load the trained model
 crop_model = joblib.load('NOTEBOOKS\RandomForest.pkl')
 fertilizer_model = joblib.load('NOTEBOOKS\RandomForest.pkl')
 
 #weather api
-WEATHER_API_KEY = "4867af3c5cff24159c594b45b0be9ca9"
+WEATHER_API_KEY = "34bd3fee32a8027642574e732728a7d7"
 WEATHER_API_URL = "https://api.openweathermap.org/data/2.5/weather"
 
 app = Flask(__name__)
@@ -27,6 +28,10 @@ def crop_recommend():
 @app.route('/fertilizer_recommendation')
 def fertilizer_recommendation():
     return render_template('fertilizer.html', title="Fertilizer Recommendation")
+
+@app.route('/weather')
+def weather():
+    return render_template('weather.html', title="Weather Prediction")
 
 @app.route('/disease_prediction')
 def disease_prediction():
@@ -142,6 +147,37 @@ def get_weather():
     
     except Exception as e:
         return jsonify({"error": str(e)})
+    
+
+# Load the chat question data from the JSON file
+
+
+# Dummy chatbot response function (to be improved later with ML models or rule-based responses)
+def get_chatbot_response(user_message):
+    with open('static/json/chat.json', 'r') as file:
+        faq_data = json.load(file)
+    # Normalize and find best match using fuzzy matching
+    best_match = process.extractOne(user_message, faq_data.keys())
+    
+    if best_match and best_match[1] > 80:  # You can set your threshold
+        return faq_data[best_match[0]]
+    else:
+        return "I'm sorry, I don't understand that. Can you please rephrase?"
+
+@app.route('/api/chat', methods=['POST'])
+def chat():
+    # Get user message from the request
+    user_message = request.json.get('message')
+
+    if not user_message:
+        return jsonify({"error": "No message provided"}), 400
+    
+    # Get the chatbot's response
+    bot_response = get_chatbot_response(user_message)
+
+    # Return the chatbot's response as JSON
+    return jsonify({"response": bot_response})
+
 
 
 

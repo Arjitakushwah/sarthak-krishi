@@ -105,6 +105,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		}
 
 	</script>
+	
+	<script src="{{ url_for('static', filename='scripts/chatbot.js') }}"></script>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -178,6 +180,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<a class="nav-link" href="{{ url_for('fertilizer_recommendation') }}">Fertilizer</a>
 					</li>
 					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('weather') }}">Weather</a>
+					</li>
+					<li class="nav-item">
 						<a class="nav-link" href="{{ url_for('disease_prediction') }}">Disease</a>
 					</li>
 					<li class="nav-item">
@@ -227,8 +232,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</footer>
 	<!-- //footer -->
 
+	 <!-- Chatbot -->
+	 <div id="chatbot" onclick="toggleChat()">💬</div>
+	 <div id="chatbox">
+		 <div id="chatbox-header">
+			 Chat with us!
+		 </div>
+		 <div id="chatbox-body"></div>
+		 <div id="chatbox-footer">
+			 <input type="text" id="userMessage" placeholder="Type your message..." />
+			 <button onclick="sendMessage()">Send</button>
+		 </div>
+	 </div>
 	<!-- move top icon -->
-	<a href="#home" class="move-top text-center"></a>
+	<!-- <a href="#home" class="move-top text-center"></a> -->
 	<!-- //move top icon -->
 </body>
 
