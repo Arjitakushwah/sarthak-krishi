@@ -7,6 +7,8 @@ import pandas as pd
 from utils.fertilizer import fertilizer_dic
 from markupsafe import Markup
 from fuzzywuzzy import process
+from google import genai
+
 # Load the trained model
 crop_model = joblib.load('NOTEBOOKS\RandomForest.pkl')
 fertilizer_model = joblib.load('NOTEBOOKS\RandomForest.pkl')
@@ -181,6 +183,57 @@ def chat():
 
     # Return the chatbot's response as JSON
     return jsonify({"response": bot_response})
+
+
+# Initialize the Gemini client with your API key
+client = genai.Client(api_key="AIzaSyA3488jY1IFUZowigfFtQ9m9zRlX-3wTmc")
+
+import re
+
+def clean_response(text):
+    # Remove *, -, and unwanted bullet characters
+    text = re.sub(r'^\s*[\*\-\•]\s*', '', text, flags=re.MULTILINE)
+    # Optionally remove extra newlines if needed
+    text = re.sub(r'\n{2,}', '\n\n', text)
+    return text.strip()
+
+def get_gemini_response(user_input):
+    try:
+        instruction = (
+            "Answer in simple paragraph format without using any bullets (*, -, •) or markdown syntax. "
+            "Just use plain text. Start directly with the answer. No headings, no lists, only clean sentences."
+        )
+        final_prompt = instruction + "\n\n" + user_input
+
+        response = client.models.generate_content(
+            model="gemini-2.0-flash",
+            contents=final_prompt
+        )
+
+        # Now clean the response text
+        clean_text = clean_response(response.text)
+        return clean_text
+    except Exception as e:
+        return f"Error: {str(e)}"
+
+ 
+@app.route('/chat')
+def chat2():
+    return render_template('chat.html')
+
+# Route for handling chatbot requests (API endpoint)
+@app.route('/chatbot', methods=['POST'])
+def chatbot():
+    data = request.get_json()  # Get the request data (JSON)
+    user_message = data.get("message")  # Extract message
+    
+    if not user_message:
+        return jsonify({"response": "Please provide a question."})
+    
+    # Get response from Gemini API
+    response_text = get_gemini_response(user_message)
+    
+    return jsonify({"response": response_text})
 
 
 
