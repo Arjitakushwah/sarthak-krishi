@@ -41,6 +41,10 @@ def disease_prediction():
 def schemes():
     return render_template('schemes.html', title="Government Schemes")
 
+@app.route('/news')
+def news():
+    return render_template('news.html', title="News & Events")
+
 @app.route('/faq')
 def faq():
     with open('static/json/faq.json', 'r') as file:

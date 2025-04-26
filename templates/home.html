@@ -46,11 +46,11 @@
 
 <!-- Products & Services -->
 <section class="blog py-5">
-    <div class="container py-md-5">
+    <div class="container">
         <h3 class="heading mb-sm-5 mb-4 text-center">Our Services</h3>
         <div class="row blog-grids">
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card border-0 shadow">
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow h-100">
                     <img src="{{ url_for('static', filename='images/s3.jpg') }}" class="card-img-top img-fluid" alt="Crop">
                     <div class="card-body">
                         <h4 class="card-title">Crop</h4>
@@ -60,8 +60,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card border-0 shadow">
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow h-100">
                     <img src="{{ url_for('static', filename='images/s2.jpg') }}" class="card-img-top img-fluid" alt="Fertilizer">
                     <div class="card-body">
                         <h4 class="card-title">Fertilizer</h4>
@@ -71,19 +71,43 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card border-0 shadow">
+             <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow h-100">
                     <img src="{{ url_for('static', filename='images/s4.jpg') }}" class="card-img-top img-fluid" alt="Crop Disease">
                     <div class="card-body">
-                        <h4 class="card-title">Crop Disease</h4>
-                        <p class="card-text">Predicting the name and causes of crop disease and suggestions to cure it.</p>
-                        <a href="{{ url_for('disease_prediction') }}" class="btn btn-primary">Learn More</a>
+                        <h4 class="card-title">Weather Prediction</h4>
+                        <p class="card-text">Predicting the weather Conditions.</p>
+                        <a href="{{ url_for('weather') }}" class="btn btn-primary">Learn More</a>
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
     </div>
 </section>
+
+<section class="py-5 bg-light">
+    <div class="container">
+      <h3 class="heading mb-4 text-center">Latest Agriculture News</h3>
+  
+      <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper" id="carouselItems">
+          <!-- News cards will be injected here -->
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="/news" class="btn btn-primary">See All News</a>
+      </div>
+  
+    </div>
+  </section>
+  
+  
+
 <!-- //Products & Services -->
+
+<!-- Home News Carousel Script -->
+<script src="{{ url_for('static', filename='scripts/home_news.js') }}"></script>
+
 
 {% endblock %}

@@ -4,15 +4,19 @@
 <section class="py-5">
     <div class="container py-md-4">
         <h3 class="heading mb-sm-5 mb-4 text-center">Weather Prediction</h3>
-        <form id="weatherForm" class="row g-3">
-            <div class="col-md-6 mt-3">
-                <label for="city" class="form-label">Enter City Name</label>
-                <input type="text" id="city" name="city" class="form-control" required>
+        <div class="d-flex justify-content-center"> <!-- Center align wrapper -->
+            <div class="card p-4" style="max-width: 500px; width: 100%;"> <!-- Card for form -->
+                <form id="weatherForm" class="row g-3">
+                    <div class="col-12 mt-3">
+                        <label for="city" class="form-label">Enter City Name</label>
+                        <input type="text" id="city" name="city" class="form-control" required>
+                    </div>
+                    <div class="col-12 text-center mt-4">
+                        <button type="submit" class="btn btn-primary">Get Weather</button>
+                    </div>
+                </form>
             </div>
-            <div class="col-12 text-center mt-4">
-                <button type="submit" class="btn btn-primary">Get Weather</button>
-            </div>
-        </form>
+        </div>
     </div>
 </section>
 

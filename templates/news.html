@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block body %}
+<section class="py-5 bg-light">
+  <div class="container">
+    <h3 class="heading mb-4 text-center">All Agriculture News</h3>
+
+    <div class="row" id="newsContainer">
+      <!-- All news cards will come here by JavaScript -->
+    </div>
+  </div>
+</section>
+
+<script src="{{ url_for('static', filename='scripts/news.js') }}"></script>
+{% endblock %}

@@ -18,168 +18,191 @@
 </section>
 
 <!-- Schemes in Card Layout -->
+
+
+
 <section class="py-5">
-  <div class="container py-md-4">
-    <h3 class="heading mb-sm-5 mb-4 text-center">Available Schemes</h3>
-    <div class="row">
-      <!-- Card 1 -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card h-100">
-          <img
-            src="{{ url_for('static', filename='images/pmfby.png') }}"
-            class="card-img-top"
-            alt="PMFBY"
-          />
-          <div class="card-body">
-            <h5 class="card-title">Pradhan Mantri Fasal Bima Yojana (PMFBY)</h5>
-            <p class="card-text">
-              A comprehensive crop insurance scheme to protect farmers against
-              natural calamities, pests, and diseases.
-            </p>
-          </div>
-          <div class="card-footer text-center">
-            <a
-              href="https://pmfby.gov.in/"
-              class="btn btn-primary btn-sm"
-              target="_blank"
-              >Learn More</a
-            >
-          </div>
-        </div>
-      </div>
+    <div class="container py-md-4">
+        <h3 class="heading mb-sm-5 mb-4 text-center">Government Schemes for Farmers</h3>
 
-      <!-- Card 2 -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card h-100">
-          <img
-            src="{{ url_for('static', filename='images/soilhealth.png') }}"
-            class="card-img-top"
-            alt="Soil Health Card"
-          />
-          <div class="card-body">
-            <h5 class="card-title">Soil Health Card Scheme</h5>
-            <p class="card-text">
-              Helps farmers understand the health of their soil and provides
-              recommendations for nutrients and fertilizers.
-            </p>
-          </div>
-          <div class="card-footer text-center">
-            <a
-              href="https://soilhealth.dac.gov.in/"
-              class="btn btn-primary btn-sm"
-              target="_blank"
-              >Learn More</a
-            >
-          </div>
-        </div>
-      </div>
+        <div class="row g-4" style="row-gap: 30px;">
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-shield-alt fa-3x text-primary"></i>
+                        </div>
+                        <h5 class="card-title">Pradhan Mantri Fasal Bima Yojana</h5>
+                        <p class="card-text">Crop insurance scheme protecting farmers against natural calamities, pests, and diseases.</p>
+                        <a href="https://pmfby.gov.in/" target="_blank" class="btn btn-outline-primary btn-sm mt-2">Read More</a>
+                    </div>
+                </div>
+            </div>
 
-      <!-- Card 3 -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card h-100">
-          <img
-            src="{{ url_for('static', filename='images/pmkisan.jpeg') }}"
-            class="card-img-top"
-            alt="PM-KISAN"
-          />
-          <div class="card-body">
-            <h5 class="card-title">PM-KISAN</h5>
-            <p class="card-text">
-              Offers financial assistance of ₹6,000 per year to farmers in three
-              installments to support their agricultural needs.
-            </p>
-          </div>
-          <div class="card-footer text-center">
-            <a
-              href="https://pmkisan.gov.in/"
-              class="btn btn-primary btn-sm"
-              target="_blank"
-              >Learn More</a
-            >
-          </div>
-        </div>
-      </div>
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-water fa-3x text-success"></i>
+                        </div>
+                        <h5 class="card-title">Pradhan Mantri Krishi Sinchai Yojana</h5>
+                        <p class="card-text">Ensures irrigation to every field and promotes efficient water usage through micro-irrigation.</p>
+                        <a href="https://pmksy.gov.in/" target="_blank" class="btn btn-outline-success btn-sm mt-2">Read More</a>
+                    </div>
+                </div>
+            </div>
 
-      <!-- Card 4 -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card h-100">
-          <img
-            src="{{ url_for('static', filename='images/rkvy.jpeg') }}"
-            class="card-img-top"
-            alt="RKVY"
-          />
-          <div class="card-body">
-            <h5 class="card-title">Rashtriya Krishi Vikas Yojana (RKVY)</h5>
-            <p class="card-text">
-              Encourages states to increase public investment in agriculture and
-              allied sectors.
-            </p>
-          </div>
-          <div class="card-footer text-center">
-            <a
-              href="https://rkvy.nic.in/"
-              class="btn btn-primary btn-sm"
-              target="_blank"
-              >Learn More</a
-            >
-          </div>
-        </div>
-      </div>
-      <!-- Card 5: eNAM -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card h-100">
-          <img
-            src="{{ url_for('static', filename='images/enam.png') }}"
-            class="card-img-top"
-            alt="eNAM"
-          />
-          <div class="card-body">
-            <h5 class="card-title">National Agriculture Market (eNAM)</h5>
-            <p class="card-text">
-              A digital platform that connects farmers with buyers, ensuring
-              better price discovery and transparency in transactions.
-            </p>
-          </div>
-          <div class="card-footer text-center">
-            <a
-              href="https://enam.gov.in/"
-              class="btn btn-primary btn-sm"
-              target="_blank"
-              >Learn More</a
-            >
-          </div>
-        </div>
-      </div>
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-seedling fa-3x text-warning"></i>
+                        </div>
+                        <h5 class="card-title">Soil Health Card Scheme</h5>
+                        <p class="card-text">Provides soil testing reports to farmers for balanced and customized fertilizer use.</p>
+                        <a href="https://soilhealth.dac.gov.in/" target="_blank" class="btn btn-outline-warning btn-sm mt-2">Read More</a>
+                    </div>
+                </div>
+            </div>
 
-      <!-- Card 6: PM-KUSUM -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card h-100">
-          <img
-            src="{{ url_for('static', filename='images/pmkusum.png') }}"
-            class="card-img-top"
-            alt="PM-KUSUM"
-          />
-          <div class="card-body">
-            <h5 class="card-title">PM-KUSUM</h5>
-            <p class="card-text">
-              A scheme that aims to promote the generation of solar power by
-              farmers, reducing their electricity bills and making them
-              energy-efficient.
-            </p>
+            <!-- Card 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-rupee-sign fa-3x text-danger"></i>
+                        </div>
+                        <h5 class="card-title">PM-Kisan Samman Nidhi</h5>
+                        <p class="card-text">₹6,000 yearly financial support directly transferred to eligible farmers' bank accounts.</p>
+                        <a href="https://pmkisan.gov.in/" target="_blank" class="btn btn-outline-danger btn-sm mt-2">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-store fa-3x text-info"></i>
+                        </div>
+                        <h5 class="card-title">e-NAM</h5>
+                        <p class="card-text">Online marketplace for transparent sale of agricultural produce at better prices.</p>
+                        <a href="https://www.enam.gov.in/" target="_blank" class="btn btn-outline-info btn-sm mt-2">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-credit-card fa-3x text-secondary"></i>
+                        </div>
+                        <h5 class="card-title">Kisan Credit Card</h5>
+                        <p class="card-text">Provides timely and affordable loans to farmers for crop cultivation and allied activities.</p>
+                        <a href="https://vikaspedia.in/agriculture/policies-and-schemes/kisan-credit-card-scheme" target="_blank" class="btn btn-outline-secondary btn-sm mt-2">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100">
+                  <div class="card-body text-center">
+                      <div class="mb-3">
+                          <i class="fas fa-tractor fa-3x text-success"></i>
+                      </div>
+                      <h5 class="card-title">Rashtriya Krishi Vikas Yojana (RKVY)</h5>
+                      <p class="card-text">Boosts agricultural development with state-level projects, innovations, and investments.</p>
+                      <a href="https://rkvy.nic.in/" target="_blank" class="btn btn-outline-success btn-sm mt-2">Read More</a>
+                  </div>
+              </div>
           </div>
-          <div class="card-footer text-center">
-            <a
-              href="https://pmkusum.in/"
-              class="btn btn-primary btn-sm"
-              target="_blank"
-              >Learn More</a
-            >
+
+          <!-- Card 8 -->
+          <div class="col-md-6 col-lg-4">
+              <div class="card h-100">
+                  <div class="card-body text-center">
+                      <div class="mb-3">
+                          <i class="fas fa-tree fa-3x text-warning"></i>
+                      </div>
+                      <h5 class="card-title">National Mission for Sustainable Agriculture</h5>
+                      <p class="card-text">Focuses on climate-resilient farming, soil health management, and water conservation.</p>
+                      <a href="https://agricoop.nic.in/en/major-schemes/national-mission-sustainable-agriculture-nmsa" target="_blank" class="btn btn-outline-warning btn-sm mt-2">Read More</a>
+                  </div>
+              </div>
           </div>
+
+          <!-- Card 9 -->
+          <div class="col-md-6 col-lg-4">
+              <div class="card h-100">
+                  <div class="card-body text-center">
+                      <div class="mb-3">
+                          <i class="fas fa-hand-holding-usd fa-3x text-danger"></i>
+                      </div>
+                      <h5 class="card-title">Paramparagat Krishi Vikas Yojana</h5>
+                      <p class="card-text">Promotes organic farming and the adoption of traditional sustainable practices.</p>
+                      <a href="https://pgsindia-ncof.gov.in/pkvy/index.aspx" target="_blank" class="btn btn-outline-danger btn-sm mt-2">Read More</a>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Card 10 -->
+          <div class="col-md-6 col-lg-4">
+              <div class="card h-100">
+                  <div class="card-body text-center">
+                      <div class="mb-3">
+                          <i class="fas fa-chart-line fa-3x text-info"></i>
+                      </div>
+                      <h5 class="card-title">Micro Irrigation Fund (MIF)</h5>
+                      <p class="card-text">Financial support for micro-irrigation projects improving water efficiency in farming.</p>
+                      <a href="https://nhb.gov.in/" target="_blank" class="btn btn-outline-info btn-sm mt-2">Read More</a>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Card 11 -->
+          <div class="col-md-6 col-lg-4">
+              <div class="card h-100">
+                  <div class="card-body text-center">
+                      <div class="mb-3">
+                          <i class="fas fa-leaf fa-3x text-secondary"></i>
+                      </div>
+                      <h5 class="card-title">National Food Security Mission (NFSM)</h5>
+                      <p class="card-text">Increases production of rice, wheat, pulses, and coarse cereals through effective programs.</p>
+                      <a href="https://nfsm.gov.in/" target="_blank" class="btn btn-outline-secondary btn-sm mt-2">Read More</a>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Card 12 -->
+          <div class="col-md-6 col-lg-4">
+              <div class="card h-100">
+                  <div class="card-body text-center">
+                      <div class="mb-3">
+                          <i class="fas fa-seedling fa-3x text-primary"></i>
+                      </div>
+                      <h5 class="card-title">Gramin Bhandaran Yojana</h5>
+                      <p class="card-text">Encourages farmers to build storage warehouses to reduce post-harvest losses.</p>
+                      <a href="https://agriwelfare.gov.in/" target="_blank" class="btn btn-outline-primary btn-sm mt-2">Read More</a>
+                  </div>
+              </div>
+          </div>
+
         </div>
-      </div>
     </div>
-  </div>
 </section>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+
 
 <!-- FAQ Section -->
 <section class="faq-section py-5">
@@ -254,4 +277,8 @@
         </div>
     </div>
 </section>
+
+<style>
+ 
+</style>
 {% endblock %}

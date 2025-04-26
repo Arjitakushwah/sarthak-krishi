@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-size: 100%;
   background: #fff;
-  font-family: "Thasadith", sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 html {
@@ -54,11 +54,11 @@ li {
 
 p {
   margin: 0;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 2em;
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
   color: #707579;
-  font-weight: 600;
+ 
 }
 
 ul {
@@ -578,9 +578,7 @@ p.about-text {
 
 /*-- blog info --*/
 
-.blog-grids {
-  margin-bottom: 120px;
-}
+
 
 .blog-left,
 .blog-middle,
@@ -1291,6 +1289,25 @@ body {
   color: #666;
 }
 
+
+
+.card {
+  margin-bottom: 30px; /* Adds space below each card */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for shadow, color, and movement */
+}
+
+.card:hover {
+  background-color: #f8f9fa; /* Light background on hover */
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 255, 0.3); /* Blue shadow effect */
+}
+
+.row {
+  row-gap: 30px; /* Adds vertical space between rows */ 
+}
+
+
+
 /*-- Responsive design --*/
 
 @media (max-width: 1366px) {
@@ -1337,9 +1354,7 @@ body {
   .bg-left h4 {
     font-size: 21px;
   }
-  .blog-grids {
-    margin-bottom: 160px;
-  }
+ 
   .feedback-info h4 {
     letter-spacing: 3px;
   }
@@ -1365,9 +1380,7 @@ body {
     width: 33.33%;
     float: left;
   }
-  .blog-grids {
-    margin-bottom: 100px;
-  }
+
   .text p {
     width: 100%;
   }
@@ -1559,9 +1572,7 @@ body {
   .overlay1 {
     min-height: 520px;
   }
-  .blog-grids {
-    margin-bottom: 70px;
-  }
+
   .about-left h5 {
     font-size: 18px;
   }
@@ -1641,9 +1652,7 @@ body {
   .blog-middle {
     margin-bottom: 4em;
   }
-  .blog-grids {
-    margin-bottom: 85px;
-  }
+ 
   .bg-left h4 {
     font-size: 19px;
     line-height: 36px;
@@ -1653,9 +1662,7 @@ body {
   .contact-left-footer ul li p {
     font-size: 15px;
   }
-  .blog-grids {
-    margin-bottom: 90px;
-  }
+ 
   h4.abt-text {
     font-size: 1.6em;
   }
@@ -1710,9 +1717,7 @@ body {
   .csslider > .arrows label {
     padding: 7px;
   }
-  .blog-grids {
-    margin-bottom: 100px;
-  }
+  
   .about-left h4 {
     font-size: 18px;
   }
